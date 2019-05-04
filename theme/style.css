@@ -1,0 +1,260 @@
+* {box-sizing: border-box;}
+body {
+	font: 1.3em 'Source Sans Pro', sans-serif;
+	line-height: 1.6em;
+	margin: 0 auto;
+	padding: 40px;
+	max-width: 780px;
+	width: 100%;
+	background: #eee url("bg.gif");
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-weight: normal;
+	text-align: left;
+}  
+h1 {
+	font-size: 3.1em;
+	line-height: 1.6em;
+}
+h2 {
+	font-size: 2.6em;
+	line-height: 1em;
+}
+h3 {
+	font-size: 2.2em;
+	line-height: 0.8em;
+}
+h4 {
+	font-size: 1.6em;
+}
+a{color: #000;}
+a:hover {color: purple;}
+.icons {
+	width: 24px; height: 24px;
+	background: url('icons.svg');
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.iconTag {margin-right: 15px;}
+.iconPin {background-position-x: -24px;margin-right: 15px;}
+.iconPages {background-position-x: -48px;margin-right: 15px;}
+.iconPrevNext {background-position-x: -72px;margin-right: 15px;}
+.iconNext {background-position-x: -96px;}
+.iconPrev {background-position-x: -120px;}
+.iconNewer {background-position-x: -144px;}
+.iconOlder {background-position-x: -168px;}
+
+.logo {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+header {
+	margin-bottom: 40px;
+}
+header h1 {
+	font-size: 2.5em;
+	font-weight: normal;
+	font-style: italic;
+	display: inline-block;
+}
+header h1 a {
+	text-decoration: none;
+}
+.bt {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	background: url('icons.svg');
+	cursor: pointer;
+}
+.secret {
+	color: #999;
+}
+.secret a {
+	color: #999;
+}
+article h1 {display:inline-block;}
+.mini {font-size:.8em;}
+.mini::before {content:' — '}
+.skipTo {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+}
+.grid > * {
+	padding: 10px;
+	border: 1px solid #ddd;
+}
+img {width: 100%;}
+figure {
+	margin: 0;
+}
+figcaption {
+	font-size: .9em;
+	text-align: right;
+}
+.comments::before {
+	content: '🖋';
+	font-size: 2.1em;
+	float: left;
+	margin-right: 10px;
+}
+.comments {
+	margin-top: 70px;
+	font-size: .9em;
+}
+
+.stars {
+	margin-left: 17px;
+}
+.star {
+	display:inline-block;
+	width:auto;
+	margin:0 4px;
+}
+.star:hover {
+	box-shadow: 0 0 5px #000;
+}
+.line3 {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 8px;
+	align-items: baseline;
+}
+hr {
+	content: ' ';
+	background: transparent url(hr.svg) no-repeat;
+	display: block;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto 20px;
+	border: none;
+}
+.tag {
+	display: inline-block;
+	padding: 3px 6px;
+	margin-right:4px;
+	margin-bottom: 4px;
+	background: #ddd;
+	text-decoration: none;
+	font-size: .9em;
+}
+.imgLeft {
+	width: 50%;
+	float:left;
+	padding: 5px 15px 5px 0;
+}
+.imgRight {
+	width: 50%;
+	float:right;
+	padding: 5px 0 5px 15px;
+}
+.img33 {
+	width: 33% !important;
+}
+.img25 {
+	width: 25% !important;
+}
+.img50 {
+	width: 50% !important;
+}
+blockquote {
+	color: #562592;
+	border-left: 5px solid #d9c6f0;
+	padding: 0px 15px;
+	margin-right: 0;
+	margin-left: 15px;
+}
+blockquote footer {
+	background: #d9c6f0;
+	color: #000;
+	padding: 4px 10px;
+	display: inline-block;
+}
+.story {
+	font-family: serif;
+	text-align: justify;
+	color: #132e7d;
+}
+
+.discA {
+	margin-bottom: 0;
+}
+
+.discI {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.discZ {
+	margin-top: 0;
+}
+
+.thinkNbsp {
+	font-size: .67em;
+}
+
+.nnbsp {
+	font-size: .67em;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+th {
+	background: #a8edd0;
+	border: 1px solid #53dca2;
+	padding: 20px;
+	font-size: 1.1em;
+	text-align: center;
+}
+td {
+	border: 1px solid #7de5b9;
+	padding: 10px;
+	text-align: center;
+}
+code {
+	background: #d9c6f0;
+	padding: 1px 3px;
+	border-radius: 4px;
+}
+.sino {
+	-ms-word-break: keep-all;
+	word-break: keep-all;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	font-size: 1.1em;
+	font-weight: 400;
+}
+.voc {
+	color: #CB3F13;
+}
+.btAff {
+	background: rgb(197,107,167);
+	color: #fff;
+	padding: 3px 8px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 5px;
+}
+.panCorrection {
+	display: none;
+}
+.date {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+h2.date {
+	margin-bottom: 10px;
+}
