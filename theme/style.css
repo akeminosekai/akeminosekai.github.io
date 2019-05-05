@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 body {
-	font: 1.3em 'Source Sans Pro', sans-serif;
-	line-height: 1.6em;
+	font: 1.1em 'Source Sans Pro', sans-serif;
+	line-height: 1.4em;
 	margin: 0 auto;
 	padding: 40px;
 	max-width: 780px;
@@ -46,8 +46,8 @@ a:hover {color: purple;}
 .iconOlder {background-position-x: -168px;}
 
 .logo {
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	border-radius: 50%;
 	vertical-align: middle;
 	margin-right: 20px;
