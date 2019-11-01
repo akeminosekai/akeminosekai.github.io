@@ -118,7 +118,6 @@ figcaption {
 	margin-top: 70px;
 	font-size: .9em;
 }
-
 .stars {
 	margin-left: 17px;
 }
@@ -191,20 +190,16 @@ blockquote footer {
 	text-align: justify;
 	color: #132e7d;
 }
-
 .discA {
 	margin-bottom: 0;
 }
-
 .discI {
 	margin-bottom: 0;
 	margin-top: 0;
 }
-
 .discZ {
 	margin-top: 0;
 }
-
 .thinkNbsp {
 	font-size: .67em;
 }
@@ -276,4 +271,15 @@ del {
 	color: #540e0e;
 	padding: 1px 2px;
 	border-radius: 4px;
+}
+.poem {
+	color: #333;
+	margin-left: 30px;
+	font-size: 1.5em;
+	font-family: cursive;
+	line-height: 1.6em;
+}
+.poem::first-letter {
+	font-size: 2em;
+	margin-left: -5px;
 }
