@@ -1,0 +1,147 @@
+Modifier l’apparence de mon blog | #documentation | *
+
+<p>Cette publication permet de prendre en main les vues de <em>Blogo</em>. Celles-ci se trouvent dans le dossier <code>content/views/</code> et permettent la disposition globale des éléments sur les différentes pages du blog.</p>
+
+<p>Pour personnaliser aisément le blog, il convient de disposer de bonnes notions en HTML et en CSS. Disposer des bases de la programmation en Python est un plus, mais cet article devrait dévoiler ce qu’il y a à savoir pour s’en sortir sans aucune connaissance en Python.</p>
+
+<p><em>Blogo</em> ne dispose que de 2 types de page&nbsp;: les pages «posts» et les pages «post». Ces deux types de page se composent d’un en-tête «head» et d’un pied de page «foot». C’est pourquoi le dossier des vues ne comporte que 4 fichiers (les fichiers finissant par <code>.cache</code> sont à ignorer (ils permettent juste une génération plus rapide du blog).</p>
+
+<p>La page «posts» affiche une liste de publications. La page d’accueil du blog est donc une page «posts», ainsi que les pages qui s’affichent lorsque l’on clique sur le nom d’une catégorie.</p>
+
+<p>La page «post» affiche une publication.</p>
+
+<p>Les pages «head» et «foot» sont intégrées aux deux pages précédentes, car elles sont communes à ces deux pages.</p>
+
+<p>Les présentations faites, passons à la syntaxe se trouvant dans ces pages. Il s’agit de code HTML dans lequel on insère du Python à l’aide de la syntaxe de <em>Tenjin</em>.</p>
+
+<h2>Syntaxe de <em>Tenjin</em></h2>
+
+<p>Pour <strong>écrire une ligne de Python</strong>, on la préfixe de «::&nbsp;». Par exemple&nbsp;:</p>
+
+<pre><code>	:: message = "bonjour"</code></pre>
+
+<p>On vient ainsi de créer une variable «message» dans laquelle on a mis la valeur «bonjour».</p>
+
+<p>Pour utiliser cette variable dans le HTML, on l’enveloppe avec «{<span></span>=» et «=}». Par exemple&nbsp;:</p>
+
+<pre><code>	&lt;h3&gt;{<span></span>=message=}&lt;/h3&gt;</code></pre>
+
+<p>Ceci affichera un titre de niveau 3 qui contient «bonjour». Si la valeur est du HTML et que l’on souhaite le conserver, il suffit de mettre 2 «=» comme ceci&nbsp;: <code>{<span></span>==message==}</code>.</p>
+
+<p>Enfin, il est possible d’insérer des conditions et des boucles. Voici un court exemple qui intègre une boucle et une condition&nbsp;:</p>
+
+<pre><code>	:: for element in elements:
+		:: if hasattr(element, 'attr'):
+			&lt;div&gt;{<span></span>=element.attr=}&lt;/div&gt;
+		:: #endif
+	:: #endfor
+</code></pre>
+
+<p>Analysons ce code qui signifie littéralement&nbsp;: «Pour chaque élément du tableau <code>elements</code>, si l’élément à un attribut nommé <code>attr</code>, alors on affiche cet attribut sur la page.». Chaque boucle et condition doit être terminée par un «:: #end...», ce qui permet de ne pas avoir à indenter comme en Python (mais l’indentation apporte selon moi une lisibilité du code nécessaire). On peut porter notre attention sur <code>hasattr(...)</code> qui permet de vérifier qu’un objet dispose bien d’un attribut (très utile pour le blog qui, selon la page à générer, ne contient pas certains objets).</p>
+
+<p>Concrètement, ce dernier bout de code pourrait parcourir tous les articles du blog et afficher leur titre sur la page. Il suffit de connaitre tous les objets et leurs attributs, fournis par <em>Blogo</em>, pour les utiliser dans les pages.</p>
+
+<h2>Objets et attributs de <em>Blogo</em></h2>
+
+<p>Tous les attributs du blog sont disponibles via le nom «blog». Voici l’architecture complète de «blog»&nbsp;:</p>
+
+<ul>
+	<li>blog
+		<ul>
+			<li>publicBaseURL&nbsp;: base de l’adresse publique du blog</li>
+			<li>title&nbsp;: titre du blog</li>
+			<li>description&nbsp;: description du blog</li>
+			<li>pagination&nbsp;: nombre de publications affichées par page du blog</li>
+			<li>folder&nbsp;: type de blog (soit «secret», soit «public»)</li>
+			<li>secretBaseURL&nbsp;: chemin absolu du dossier <code>secret/</code></li>
+			<li>updated&nbsp;: date de dernière génération du blog (à utiliser avec strftime() comme ceci : <code>blog.updated.strftime('%x')</code> (se référer à <a href="https://docs.python.org/fr/3.6/library/datetime.html?highlight=strftime#strftime-and-strptime-behavior">cette page</a> pour savoir comment afficher la date et l’heure au format voulu))</li>
+			<li>posts&nbsp;: tableau de toutes les publications (post), la première étant la plus récente
+				<ul>
+					<li>post :
+						<ul>
+							<li>secret&nbsp;: publication secrète (booléen)</li>
+							<li>mask&nbsp;: publication masquée (booléen)</li>
+							<li>pin&nbsp;: publication épinglée (booléen)</li>
+							<li>dir&nbsp;: chemin de la publication (par exemple&nbsp;: «2019/05/05» pour cette publication)</li>
+							<li>slug&nbsp;: url de la publication (à partir du dossier <code>posts/</code></li>
+							<li>style&nbsp;: url du style CSS spécifique à la publication</li>
+							<li>script&nbsp;: url du script Javascript spécifique à la publication</li>
+							<li>pub&nbsp;: date de la publication (JJ/MM/AAAA)</li>
+							<li>title&nbsp;: titre de la publication</li>
+							<li>content&nbsp;: contenu de la publication</li>
+							<li>tags&nbsp;: tableau de toutes les catégories de la publication (tag)
+								<ul>
+									<li>tag&nbsp;:
+										<ul>
+											<li>id&nbsp;: identifiant de la catégorie</li>
+											<li>text&nbsp;: nom de la catégorie</li>
+											<li>description&nbsp;: description de la catégorie</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><em>autres clefs personnelles (si présentes)</em></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>tags&nbsp;: tableau de toutes les catégories du blog (se présente avec les mêmes attributs que les «tags» d’un «post»).</li>
+			<li>pins&nbsp;: tableau de toutes les publications épinglées du blog (se présente avec les mêmes attributs qu’un «post».</li>
+			<li>viewHead()&nbsp;: fonction permettant d’afficher le contenu du fichier <code>head</code></li>
+			<li>viewFoot()&nbsp;: fonction permettant d’afficher le contenu du fichier <code>foot</code></li>
+			<li>view(filename, data)&nbsp;: fonction permettant d’afficher le contenu de fichier «filename» en lui transférant les données «data». «data» est un dictionnaire (Python) (par exemple&nbsp;: <code>blog.view('pagination.pyhtml', {'nbPages': blog.totalPages, 'numPage': blog.numPage})</code> permet d’externaliser le code de la pagination dans un fichier nommé «pagination.pyhtml»)</li>
+			<li>removeHTML(text)&nbsp;: fonction permettant de retirer le HTML d’un texte «text» (par exemple&nbsp;: <code>blog.removeHTML(blog.title)</code> permet de retirer le HTML du titre du blog, ce qui est idéal pour faire figurer le titre dans la balise <code>title</code> de la page)</li>
+			<li>pageNum&nbsp;: numéro de la page (pour la pagination)</li>
+			<li>totalPages&nbsp;: nombre total de pages (pour la pagination)</li>
+		</ul>
+	</li>
+</ul>
+
+<p>Si par exemple on souhaite accéder au titre du post le plus récent, on insérera&nbsp;:</p>
+
+<pre><code>	{<span></span>==blog.posts[0].title==}
+</code></pre>
+
+<p>Attention&nbsp;: Le premier élément du tableau ne se trouve pas à la position 1, mais à la position 0.</p>
+
+<p>Il est possible d’ajouter des attributs à «blog» en les spécifiant dans le fichier <code>config</code>.</p>
+
+<h3>Des attributs dans le contenu des publications</h3>
+
+<p>On peut intégrer les attributs de «blog» au sein même du contenu HTML d’une publication. Pour ce faire, il faut utiliser la syntaxe <code>{<span></span>==blog.attribut==}</code> où <em>attribut</em> est un attribut de blog. Cela peut être utile pour afficher par exemple le titre du blog dans une publication, sans avoir à modifier celle-ci si un jour on souhaite changer le titre du blog. Il est à noter que l’on ne peut pas utiliser les attributs relatifs à la publication courante, simplement parce que l’on ne peut pas déterminer l’index du <em>post</em> dans <em>posts</em>. Cette fonctionnalité pourra être intégrée un jour, si quelqu’un en fait la <a href="https://bitbucket.org/diatomee/blogo/issues/new">demande ici</a>. En réalité, entre «{<span></span>=» et «=}», il est possible d’insérer tout code Python 3 valide et ayant un lien avec <em>Blogo</em> (sinon la conversion est simplement ignorée). Il est à noter que la syntaxe ressemble à celle de <em>Tenjin</em> uniquement pour ne pas avoir à apprendre quelque chose de plus, mais ici, on ne peut mettre qu’un seul signe égal de chaque côté de la variable. Si l’on veut vraiment écrire <code>{<span></span>=blog.title=}</code> dans la publication, sans conversion (comme c’est le cas dans cette publication), il suffit de séparer l’accolade ouvrante du signe égal par une balise span&nbsp;: <code>{&lt;span&gt;&lt;/span&gt;=blog.title=}</code></p>
+
+<h2>Un peu de Python</h2>
+
+<p>Il est très utile de connaitre certaines choses en Python pour personnaliser efficacement son blog. Les vues proposées par <em>Blogo</em> peuvent permettre d’en apprendre beaucoup. Voyons quelques exemples pratiques&nbsp;:</p>
+
+<h3>Nombre d’éléments dans un tableau</h3>
+
+<p>Pour connaître le nombre de publications épinglées sur le blog, il suffit d’écrire&nbsp;:</p>
+
+<pre><code>	len(blog.pins)
+</code></pre>
+
+<p>La ligne complète pour vérifier s’il y a des publications épinglées est&nbsp;:</p>
+
+<pre><code>	:: if len(blog.pins) > 0:
+</code></pre>
+
+<h3>Insertion de valeurs dans un tableau et restitution sous forme de chaine de caractères</h3>
+
+<p>Admettons que nous voulons afficher toutes les catégories du blog en haut du blog (comme c’est le cas sur ce blog de démonstration), il convient d’insérer des morceaux de HTML dans un tableau avant de les afficher sur la page. Voici un exemple minimal&nbsp;:</p>
+
+<pre><code>	:: htmlTags = []
+	:: for t in blog.tags:
+		htmlTags.append('&lt;span class="tag"&gt;', t.text, '&lt;/span&gt;')
+	:: #endfor
+	&lt;div class="tags"&gt;{<span></span>==' - '.join(htmlTags)==}&lt;/div&gt;
+</code></pre>
+
+<p>À la 3ème ligne, on insère le nom de la catégorie enrobée de HTML dans le tableau <code>htmlTags</code>. À la dernière ligne, on transforme le tableau en chaine de caractères en séparant chaque élément du tableau par « - ». S’il y a deux catégories nommées A et B, ce code affichera&nbsp;:</p>
+
+<pre><code>	&lt;div class="tags"&gt;&lt;span class="tag"&gt;A&lt;/span&gt; - &lt;span class="tag"&gt;B&lt;/span&gt;&lt;/div&gt;
+</code></pre>
+
+<h3>En savoir plus</h3>
+
+<p>Les vues du blog contiennent la plupart des exemples que l’on pourrait avoir à utiliser. Il suffit de les analyser avec attention. Mais s’il y a besoin de faire quelque chose de vraiment spécifique, le mieux est d’apprendre un minimum le langage Python.</p>
