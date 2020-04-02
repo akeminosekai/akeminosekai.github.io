@@ -78,7 +78,10 @@ header h1 a {
 .secret a {
 	color: #999;
 }
-article h1 {display:inline-block;}
+article h1 {
+	display:inline-block;
+	line-height: 1em;
+}
 .mini {font-size:.8em;}
 .mini::before {content:' — '}
 .skipTo {
