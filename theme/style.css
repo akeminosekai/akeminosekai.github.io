@@ -8,6 +8,7 @@ body {
 	width: 100%;
 	background: #eee url("bg.gif");
 }
+p {text-align: justify;}
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Mouse Memoirs', sans-serif;
 	font-weight: normal;
@@ -28,8 +29,9 @@ h3 {
 h4 {
 	font-size: 1.6em;
 }
-a{color: #000;}
-a:hover {color: purple;}
+header a {color: #000;}
+a{color: #282d60;}
+a:hover {color: #141fbe;}
 .icons {
 	width: 24px; height: 24px;
 	background: url('icons.svg');
@@ -65,93 +67,30 @@ header h1 {
 header h1 a {
 	text-decoration: none;
 }
-.bt {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	background: url('icons.svg');
-	cursor: pointer;
-}
-.secret {
-	color: #999;
-}
-.secret a {
-	color: #999;
-}
-article h1 {
+article h1 { /* titre de l'article*/
 	display:inline-block;
 	line-height: 1em;
 }
-.mini {font-size:.8em;}
-.mini::before {content:' — '}
-.skipTo {
+.skipTo { /* passer d'un article à l'autre*/
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-gap: 10px;
 }
-.grid1-3 {
+.grid { /* grille affichage img à coté de txt*/
 	display: grid;
 	grid-template-columns: 1fr 3fr;
-	grid-gap: 20px;
+	grid-gap: 2em;
 	align-items: center;
-}
-.grid3-1 {
-	display: grid;
-	grid-template-columns: 3fr 1fr;
-	grid-gap: 20px;
-	align-items: center;
-}
-.grid1-1 {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
-	align-items: center;
-}
-.grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 10px;
-}
-.grid > * {
-	padding: 10px;
-	border: 1px solid #ddd;
 }
 img {width: 100%;}
-figure {
+figure { /* image dans une figure*/
 	margin: 0;
 }
-figcaption {
+figcaption { /* légende de la figure*/
 	font-size: .9em;
 	text-align: right;
 }
-.comments::before {
-	content: '🖋';
-	font-size: 2.1em;
-	float: left;
-	margin-right: 10px;
-}
-.comments {
-	margin-top: 70px;
-	font-size: .9em;
-}
-.stars {
-	margin-left: 17px;
-}
-.star {
-	display:inline-block;
-	width:auto;
-	margin:0 4px;
-}
-.star:hover {
-	box-shadow: 0 0 5px #000;
-}
-.line3 {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 8px;
-	align-items: baseline;
-}
-hr {
+hr { /* saut de ligne*/
 	content: ' ';
 	background: transparent url(hr.svg) no-repeat;
 	display: block;
@@ -160,7 +99,7 @@ hr {
 	margin: 0 auto 20px;
 	border: none;
 }
-.tag {
+.tag { /* catégories*/
 	display: inline-block;
 	padding: 3px 6px;
 	margin-right:4px;
@@ -169,82 +108,51 @@ hr {
 	text-decoration: none;
 	font-size: .9em;
 }
-.imgLeft {
-	width: 50%;
-	float:left;
-	padding: 5px 15px 5px 0;
-}
-.imgRight {
-	width: 50%;
-	float:right;
-	padding: 5px 0 5px 15px;
-}
-.img33 {
-	width: 33% !important;
-}
-.img25 {
-	width: 25% !important;
-}
-.img50 {
-	width: 50% !important;
-}
-blockquote {
+blockquote { /* citation*/
 	color: #562592;
 	border-left: 5px solid #d9c6f0;
 	padding: 0px 15px;
 	margin-right: 0;
 	margin-left: 15px;
 }
-blockquote footer {
+blockquote footer { /* auteur de citation*/
 	background: #d9c6f0;
 	color: #000;
 	padding: 4px 10px;
 	display: inline-block;
 }
-.story {
-	font-family: serif;
-	text-align: justify;
-	color: #132e7d;
-}
-.discA {
+.discA { /* style dialogue réplique 1*/
 	margin-bottom: 0;
 }
-.discI {
+.discI { /* style dialogue réplique milieu*/
 	margin-bottom: 0;
 	margin-top: 0;
 }
-.discZ {
+.discZ { /* style dialogue réplique de fin*/
 	margin-top: 0;
 }
-.thinkNbsp {
-	font-size: .67em;
-}
-
-.nnbsp {
-	font-size: .67em;
-}
-table {
+table { /* uniquement dans article typo*/
 	border-collapse: collapse;
 	width: 100%;
 }
-th {
+th { /* entête tableau uniquement dans article typo*/
 	background: #a8edd0;
 	border: 1px solid #53dca2;
 	padding: 20px;
 	font-size: 1.1em;
 	text-align: center;
 }
-td {
+td { /* tableau uniquement dans article typo*/
 	border: 1px solid #7de5b9;
 	padding: 10px;
 	text-align: center;
 }
-code {
+code { /* utilisé dans les articles de documentation blogo et article typographie*/
 	background: #d9c6f0;
 	padding: 1px 3px;
 	border-radius: 4px;
 }
-.sino {
+.sino { /* survole mots en kanji pour voir lecture */
 	-ms-word-break: keep-all;
 	word-break: keep-all;
 	-webkit-hyphens: auto;
@@ -253,10 +161,10 @@ code {
 	font-size: 1.1em;
 	font-weight: 400;
 }
-.voc {
+.voc { /* survole mots en kanji pour voir sens */
 	color: #CB3F13;
 }
-.btAff {
+.btAff { /* bouton d'affichage de la correction dans exos jap*/
 	background: rgb(197,107,167);
 	color: #fff;
 	padding: 3px 8px;
@@ -264,38 +172,37 @@ code {
 	display: inline-block;
 	border-radius: 5px;
 }
-.panCorrection {
+.panCorrection { /* utilisé pour masquer les corrections des exos de japonais*/
 	display: none;
 }
-.date {
+.date { /* utilisé dans le code (templates)*/
 	margin-top: 0;
 	margin-bottom: 0;
 }
-h2.date {
+h2.date { /* utilisé dans le code (templates)*/
 	margin-bottom: 10px;
 }
-ins {
+ins { /* surligner des mots en vert dans jap*/
 	background: #95e18d;
 	text-decoration: none;
 	color: #275c29;
 	padding: 1px 2px;
 	border-radius: 4px;
 }
-del {
+del { /* surligner des mots en rouge dans jap*/
 	background: #f09292;
 	text-decoration: none;
 	color: #540e0e;
 	padding: 1px 2px;
 	border-radius: 4px;
 }
-.poem {
-	color: #333;
-	margin-left: 30px;
+.roman { /* style de citation de textes*/
 	font-size: 1.2em;
-	font-family: cursive;
+	font-family: serif;
 	line-height: 1.3em;
-}
-.poem::first-letter {
-	font-size: 1.6em;
-	margin-left: -5px;
+	padding: 1em;
+	box-shadow: 0 0 1em #ccc;
+	background: #efefef;
+	border-radius: 1em;
+	margin: 2em 0;
 }
