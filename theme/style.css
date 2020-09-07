@@ -82,9 +82,15 @@ article h1 { /* titre de l'article*/
 	grid-gap: 2em;
 	align-items: center;
 }
+.gridDemi { /* grille affichage img à coté de txt*/
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-gap: 2em;
+	align-items: center;
+}
 img {width: 100%;}
 figure { /* image dans une figure*/
-	margin: 0;
+	margin : 0px;
 }
 figcaption { /* légende de la figure*/
 	font-size: .9em;
