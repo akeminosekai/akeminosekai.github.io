@@ -273,6 +273,7 @@ del { /* surligner des mots en rouge dans jap*/
 	display: flex;
 	gap: .5em;
 	flex-wrap: wrap;
+	align-items: center;
 }
  .chapoImg > img {
 	width: 50px;
@@ -281,6 +282,8 @@ del { /* surligner des mots en rouge dans jap*/
 }
 .chapoTxt {
 	margin-top: -8px;
+	line-height: 1.2em;
+	margin-bottom: 5px;
 }
 .chapoTxt::before {
 	content:"↳ ";
