@@ -1,0 +1,152 @@
+Documentation complète | #documentation | *
+
+<p><em>Blogo</em> est un générateur de blog statique écrit en Python. Il s’utilise avec le terminal et ne dispose que d’une seule ligne de commande permettant la génération d’un blog. Le principe est simple&nbsp;: </p>
+
+<ol>
+<li>Tous les fichiers utiles au blog sont dans le dossier <code>content/</code>.</li>
+<li><em>Blogo</em>, en une ligne de commande, convertit le contenu de ce dossier en blog.</li>
+<li>Ce blog est alors disponible en 2 versions (une pour en avoir un aperçu sur son ordinateur et une autre à mettre en ligne).</li>
+</ol>
+
+<p>La documentation concerne l’utilisation du blog. La publication «<a href="../05/personnalise.html">Modifier l’apparence de mon blog</a>» est un bon complément pour qui veut apporter de la personnalisation. Je conseille de lire la documentation complète en premier.</p>
+
+<h2 id="sommaire">Sommaire</h2>
+
+<ul>
+<li><a href="#avantinstallation">Avant l’installation</a></li>
+<li><a href="#installation">Téléchargement et installation</a> <br>
+<li><a href="#arbo">Arborescence du dossier</a> <br>
+<ul><li><a href="#build"><code>build.py</code></a></li>
+<li><a href="#content"><code>content/</code></a><br>
+<ul><li><a href="#config"><code>config</code></a></li>
+<li><a href="#tags"><code>tags</code></a></li>
+<li><a href="#posts"><code>posts/</code></a></li>
+<li><a href="#views"><code>views/</code></a></li>
+<li><a href="#theme"><code>theme/</code></a></li></ul></li></ul></li>
+</ul>
+
+<h2 id="avantinstallation">Avant l’installation</h2>
+
+<p><em>Blogo</em> est écrit en <strong>Python 3</strong>.</p>
+
+<p>Les modèles de pages (appelés aussi <em>templates</em> ou <em>views</em>) sont écrits à l’aide de <strong><em>Tenjin</em></strong>, un moteur de templates qui combine de façon simple et claire du HTML et du Python.</p>
+
+<p><em>Blogo</em> nécessite donc Python (version 3 ou supérieure). Cette commande dans un terminal permet de savoir s’il est déjà présent sur l’ordinateur&nbsp;:</p>
+
+<pre><code>python3 -V</code></pre>
+
+<p>Si un numéro de version apparaît, c’est tout bon ! Sinon, il faut <a href="https://www.python.org/downloads/" class="external">installer Python 3</a>.</p>
+
+<p><em>Tenjin</em> s’installe avec ces 2 lignes de commande&nbsp;:</p>
+
+<pre><code>sudo apt-get install python3-pip</code></pre>
+<pre><code>python3 -m pip install Tenjin</code></pre>
+
+<p>Si besoin, il est aussi possible de voir comment l’installer sur <a href="https://pypi.python.org/pypi/Tenjin/" class="external">ce site</a>.</p>
+
+<h2 id="installation">Téléchargement et installation</h2>
+
+<p><em>Blogo</em> se trouve sur <em>Bitbucket</em> et peut être téléchargé en cliquant sur «Download repository», <a href="https://bitbucket.org/diatomee/blogo/downloads/">ici</a>.</p>
+<p>L’installation se fait en décompressant l’archive et en plaçant le dossier obtenu où l’on souhaite sur son ordinateur.</p>
+
+<h2 id="arbo">Arborescence du dossier</h2>
+
+<p>Faisons un tour dans le dossier téléchargé. Il s’y trouve le dossier <code>content/</code> et quelques fichiers dont le seul qui est primordial au fonctionnement de <em>Blogo</em> est <code>build.py</code>.</p>
+
+<h3 id="build"><code>build.py</code></h3>
+
+<p>C’est le fichier permettant de générer le blog en deux versions. Pour ce faire, il faut ouvrir un terminal à l’emplacement de ce fichier et saisir&nbsp;: <code>python3 build.py</code>. Un dossier <code>secret/</code> et un dossier <code>public/</code> vont alors apparaître. Si le terminal affiche une erreur, il faut chercher à la résoudre, car la génération a été interrompue.</p>
+
+<h3 id="content"><code>content/</code></h3>
+
+<p>Ce dossier regroupe tous les fichiers et dossiers qui seront incorporés sous une forme ou une autre dans le blog. Passons en revue chaque élément de <span class="path">content/</span>.</p>
+
+<h4 id="config"><code>config</code></h4>
+
+<p>Contient la configuration du blog. Il s’agit d’un fichier composé de clefs et valeurs. La syntaxe nécessite un peu de rigueur&nbsp;:</p>
+
+<ul>
+<li>une ligne par clef/valeur;</li>
+<li>aucune ligne vide;</li>
+<li>la clef est séparée de la valeur par ":";</li>
+<li>la valeur est toujours un texte non mis entre guillemets.</li>
+</ul>
+
+<p>Voici la liste des clefs obligatoires pour ce fichier&nbsp;:</p>
+
+<ul>
+<li><code>publicBaseURL</code>&nbsp;: l’adresse où sera consultable le blog. Cette adresse est en général celle d’un serveur distant (sur Internet) et ressemble à ceci si le blog est hébergé sur Github&nbsp;: <code>https://nomDuBlog.github.io/</code> (le "/" final est très important);</li>
+<li><code>title</code>&nbsp;: Le titre du blog;</li>
+<li><code>description</code>&nbsp;: La description du blog;</li>
+<li><code>pagination</code>&nbsp;: Le nombre maximal de publications à afficher par page;</li>
+</ul>
+
+<p>Il est permis de créer des clefs supplémentaires et de les utiliser dans les fichiers du dossier <code>views/</code>.
+
+
+<h4 id="tags"><code>tags</code></h4>
+
+<p>Ce fichier permet de lister les catégories du blog. Chaque catégorie comporte au moins 2 lignes, la troisième étant facultative. Chaque catégorie est séparée par un saut de ligne. Toutes les catégories du blog doivent figurer dans ce fichier. Les catégories attribuées à aucune publication doivent être retirées. L’ordre de listage des catégories sera le même sur le blog.</p>
+
+<ul>
+	<li>Ligne 1&nbsp;: l’identifiant de la catégorie (ne peut comporter que des lettres non accentuées et des chiffres). L’identifiant apparait dans les URL.</li>
+	<li>Ligne 2&nbsp;: le nom de la catégorie bien écrit. Ce nom apparaitra dans les pages du blog et peut contenir du HTML.</li>
+	<li>Ligne 3&nbsp;: la description de la catégorie. Elle peut aussi contenir du HTML.</li>
+</ul>
+
+<h4 id="posts"><code>posts/</code></h4>
+
+<p>Ce dossier regroupe toutes les publications du blog. Une publication est un fichier HTML qui se situe dans un dossier <code>JJ/</code> qui se situe dans un dossier <code>MM/</code> qui se situe dans un dossier <code>AAAA/</code>, ou JJ, MM et AAAA sont respectivement des chiffres permettant d’indiquer le jour, le mois et l’année d’une publication (cette organisation n’est pas nécessaire, mais vivement recommandée). Par exemple, cette publication se trouve ici&nbsp;: <code>posts/2019/05/04/documentation.html</code>. Dans ce même dossier, il est pratique de placer les ressources de la publication (images, fichiers CSS ou JavaScript particulier…), mais ce n’est pas obligatoire.</p>
+
+<p>Une publication est donc un fichier portant l’extension <code>.html</code>. Le nom du fichier figure dans l’URL et il convient de l’écrire uniquement avec des lettres non accentuées et des chiffres. Le fichier contient principalement du HTML, mais il dispose d’une première ligne particulière (appelée «signature» dans le texte suivant). La signature permet de définir le titre de la publication, sa date, ses catégories, sa visibilité… Chaque élément de la signature est séparé par « | » (une barre verticale entourée d'espaces). Voici tous les éléments de la signature&nbsp;:</p>
+
+<ul>
+	<li>accés à la publication&nbsp;:
+		<ul>
+			<li>*&nbsp;: brouillonne ou secrète; la publication n'apparaît que dans la version secrète du blog</li>
+			<li>~&nbsp;: publique, mais accessible uniquement en connaissant l’URL</li>
+			<li>!&nbsp;: épinglée (utile pour une page annexe ou une publication à mettre en avant)</li>
+			<li><em>ne rien mettre pour une publication entièrement publique</em></li>
+		</ul>
+	</li>
+	<li>#<em>categorie</em> (la valeur est l’identifiant défini dans le fichier <code>tags</code>)</li>
+	<li>&<em>style.css</em> (style spécifique)</li>
+	<li>><em>script.js</em> (script spécifique)</li>
+	<li>.<em>maClef</em>: <em>maValeur</em>&nbsp;: permet la création de clefs supplémentaires</li>
+	<li><em>titre</em> (le titre est la seule valeur obligatoire dans la signature)</li>
+	<li><em>date</em> (au format JJ/MM/AAAA; obligatoire si l’organisation recommandée des dossiers n'est pas respectée)</li>
+</ul>
+
+
+<p>Il est possible de créer autant de clefs supplémentaires que souhaité, de cette façon&nbsp;:
+
+<pre><code>	.variable: valeur</code></pre>
+
+<p>Ceci est très pratique pour par exemple ajouter un chapeau (petite description en tête de publication) ou une image illustrative à certaines publications. Il suffit par exemple d’écrire cette signature&nbsp;:</p>
+
+<pre><code>	Mon super article | .chapeau: Cet article va parler de quelque chose de super. | #divers</code></pre>
+
+<p>Puis de mettre dans <code>views/posts.pyhtml</code> quelque chose comme ceci, au bon endroit&nbsp;:</p>
+
+<pre><code>	:: if hasattr(p, 'chapeau'):
+		&lt;p&gt;{<span></span>==p.chapeau==}&lt;/p&gt;
+	:: #endif</code></pre>
+
+<p>Cela permet d’ajouter un chapeau pour les articles qui en ont un. Si le code ci-dessus est difficile à comprendre, il deviendra probablement plus clair en lisant «<a href="../05/personnalise.html">Modifier l’apparence de mon blog</a>».
+
+<p>Voici un autre exemple de signature et sa description&nbsp;:</p>
+
+<pre><code>	Test | 22/09/2018 | #maison | #paille | #terre | >script.js | !</code></pre>
+
+<p>Cet article a pour titre «Test». Il est daté du 22/09/2018. Il est présent dans 3 catégories («maison», «paille» et «terre»). Il dispose d’un fichier JavaScript et il est épinglé. L’ordre d’écriture des éléments n’a aucune importance, mais il est préférable de commencer par le titre puisqu’il s’agit du seul élément obligatoire.</p>
+
+<p>Entre la signature et le contenu en HTML, il faut sauter une ligne. Si des titres figurent dans le HTML, il convient de commencer par un titre de niveau 2 (<code>H2</code>), car le niveau 1 est réservé au titre de la publication.</p>
+
+<h4 id="views"><code>views/</code></h4>
+
+<p>Ce dossier regroupe les fichiers permettant d’afficher les divers éléments du blog. Ils contiennent un mélange de code HTML et Python, selon la syntaxe proposée par <em>Tenjin</em>. Les fichiers portant l’extension <code>.cache</code> apparaissent dès la première génération du blog. Ils sont à ignorer.</p>
+<p>Pour en savoir plus sur la syntaxe et les variables proposées au sein des fichiers de ce dossier, il convient de consulter la publication «<a href="../05/personnalise.html">Modifier l’apparence de mon blog</a>».</p>
+
+<h4 id="theme"><code>theme/</code></h4>
+
+<p>Ce dossier regroupe ce qui fait l’apparence du blog. On y trouve une feuille de style CSS, le logo, la <em>favicon</em> et diverses icônes. Tout ceci est modifiable et lié au contenu du dossier <code>views/</code>.</p>

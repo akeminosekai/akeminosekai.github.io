@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<title>Akemi no sekai</title>
+<meta name="description" content="Blog personnel d’Akemi">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://akeminosekai.github.io/theme/style.css">
+<link rel="icon" href="https://akeminosekai.github.io/theme/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i">
+<link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+<img class="logo" src="https://akeminosekai.github.io/theme/avatarBlog.png"/>
+<h1><a href="https://akeminosekai.github.io/">Akemi no sekai</a></h1>
+<div><span class="icons iconTag" title="Catégories"></span><a href="https://akeminosekai.github.io/lecture_1.html">Livres</a> · <a href="https://akeminosekai.github.io/film_1.html">Films et séries</a> · <a href="https://akeminosekai.github.io/ecriture_1.html">Mes écrits</a> · <a href="https://akeminosekai.github.io/samare_1.html">Samare</a> · <a href="https://akeminosekai.github.io/bd_1.html">BD</a> · <a href="https://akeminosekai.github.io/japonais_1.html">Japonais</a> · <a href="https://akeminosekai.github.io/defi_1.html">Défis artistiques</a> · <a href="https://akeminosekai.github.io/activites_1.html">Bric à brac</a> · <a href="https://akeminosekai.github.io/redaction_1.html">Rédaction</a></div>
+
+<div><span class="icons iconPin" title="Publications épinglées"></span><a href="https://akeminosekai.github.io/posts/2019/04/15/page-a-propos.html">À propos</a></div>
+
+
+
+<div><span class="icons iconPrevNext" title="Navigation entre les publications"></span><a href="https://akeminosekai.github.io/posts/2014/12/30/narrateur.html" title="30/12/2014">Le narrateur<span class="icons iconNext"></span></a> · <a href="https://akeminosekai.github.io/posts/2014/12/25/temps-recit.html" title="25/12/2014">Les temps du récit<span class="icons iconPrev"></span></a> · <a href="https://akeminosekai.github.io/posts/2023/12/31/noel-encore-et-autres.html" title="Publication la plus récente"><span class="icons iconNewer"></span></a> · <a href="https://akeminosekai.github.io/posts/2014/12/18/idee-1sur2.html" title="Publication la plus ancienne"><span class="icons iconOlder"></span></a></div>
+</header>
+<article>
+<h1>Préparer son livre à l'impression 2/3 (par Diatomée)</h1>
+<div>
+					Publié le 27/12/2014 dans <a href="https://akeminosekai.github.io/redaction_1.html">Rédaction</a>.
+</div>
+			<p>Dans cette seconde partie, nous allons voir comment réussir sa mise en page avec <em>LibreOffice Writer</em> (traitement de texte open source et gratuit que nous abrégerons en Writer dans la suite).</p>
+
+<p>Pourquoi <em>Writer</em> et pas <em>Word</em>, de <em>Microsoft</em>&#8239;?</p>
+
+<p><em>Writer</em> est&nbsp;:</p>
+
+<ul><li>gratuit et Open Source,</li><li>multi-plateformes&nbsp;: il fonctionne sur Linux, Mac OS et Windows,</li><li>très performant,</li><li>extensible&nbsp;: grâce à des extensions gratuites (dont <a href="https://grammalecte.net/">Grammalecte</a> qui permet la correction avancée).</li></ul>
+
+<p>Petite parenthèse&nbsp;: un imprimeur n’autorisant pas l’envoi de fichier au format ODT (Open Document Text, format standard de <em>Writer</em>) pour l’impression est, selon moi, un imprimeur à ne pas choisir. Personne ne devrait avoir l’obligation d’utiliser un logiciel payant comme <em>Word</em>, quand des logiciels similaires peuvent en faire autant, voir mieux, et gratuitement.</p>
+
+<p>J’ai réalisé un exemple de mise en page A5 au format ODT et le mets à votre disposition, dès maintenant, car nous allons nous en servir pour la suite. Je vous conseille de le télécharger et de l’ouvrir avec <em>Writer</em>.</p>
+
+<hr>
+
+<p>Voici le document&nbsp;: <a href="pageA5.odt">Page A5.odt</a></p>
+
+<hr>
+
+<p>Pour tout texte, il est important de <strong>séparer le contenu de la forme</strong>. C’est-à-dire que lorsqu’on écrit, on pense à la syntaxe, à la grammaire, aux conjugaisons, à l’orthographe, à la force du mot (s’il nécessite une emphase forte ou faible), à faire de bonnes phrases, etc. Dans l’idéal, la mise en forme vient après la rédaction totale, mais elle peut être débutée après la rédaction d’un chapitre par exemple, afin d’avoir un aperçu de ce qui est fait. Une mise en page dès le début peut être nécessaire, lorsqu’une consigne comme <em>L’article ne doit pas faire plus d’une page A4</em> est à appliquer. Il faut dans ce cas, par exemple, mettre le document au format A4 avant de débuter et « risquer » d’avoir à supprimer du texte parce qu’il n’entre pas dans la page.</p>
+
+<p>La mise en page se fait à travers divers styles, afin de l’automatiser de façon maximale. Ainsi, chaque paragraphe aura le <em>style paragraphe</em>, chaque titre de chapitre aura le <em>style titre de chapitre</em>, etc.</p>
+
+<p>La suite présente le fonctionnement de ce document, puis la façon dont ont été créés les divers styles et enfin, les limites de Writer.</p>
+
+<h2>Tester le document fourni</h2>
+
+<p>Je vous propose de suivre pas à pas les étapes suivantes et de les appliquer dans le document Page A5.odt. Cela ne devrait pas prendre plus de dix minutes et c’est important pour bien comprendre ce que l’on peut faire. Il s’agit d’une mise en page pour un roman.</p>
+
+<p>1 - Observer (les types de pages présents, la pagination, les titres, les lettrines, l’allure du texte, etc.)</p>
+
+<p>2 - Placer le curseur à la fin de la dernière phrase du paragraphe en page 17 (pagination non visible, car le chapitre se termine ici).</p>
+
+<p>3 - Appuyer sur la touche Entrée&nbsp;: cela place le curseur sur la page 19, prêt à écrire directement le titre du nouveau chapitre.</p>
+
+<p>4 - Écrire un titre fictif pour le nouveau chapitre&nbsp;: il est mis en forme automatiquement.</p>
+
+<p>5 - Appuyer de nouveau sur Entrée&nbsp;: cela place le curseur pour débuter le premier paragraphe du chapitre. Celui-ci comporte une lettrine qui s’agrandira jusque sur 3 lignes de texte.</p>
+
+<p>6 - Écrire plus de 3 lignes de texte fictif&nbsp;: La lettrine grossit.</p>
+
+<p>7 - Appuyer sur Entrée&nbsp;: Le second paragraphe, sans lettrine cette fois, est prêt à être tapé au clavier.</p>
+
+<p>Voilà le principe. Ce fonctionnement est uniquement possible grâce aux styles. Il faudra juste indiquer manuellement quel est le dernier paragraphe du chapitre, afin que le prochain appui sur la touche Entrée fasse que l’on arrive sur une page de droite pour débuter le nouveau chapitre (ou mettre fin au récit).</p>
+
+<h2>Comprendre le fonctionnement des styles</h2>
+
+<div class="grid" style="grid-template-columns: 2fr 2fr;">
+	<img src="1.png" alt="Fenêtre des styles">
+	<p>Un appui sur la touche F11 ou un clic sur <em>Format &gt; Styles et formatage</em> dans le menu, permet d’accéder à la fenêtre des styles. Writer comprend de nombreux styles applicables par défaut. Certains vous serviront tels quels, d’autres auront besoin d’être modifié. Pour ma part, je préfère directement créer les miens pour deux raisons&nbsp;:</p>
+</div>
+
+<ul>
+	<li>Dans la liste déroulante présente en bas de la fenêtre des styles, il y a Styles personnalisés qui n’affiche que mes styles et permet de m’y retrouver plus facilement.</li>
+	<li>Cela oblige à bien configurer chaque style et à comprendre son fonctionnement.</li>
+</ul>
+
+<h2>L’idée</h2>
+
+<p>Nous avons vu dans la première partie que certaines pages devaient avoir un folio (un numéro de page), tandis que d’autres ne devaient pas en avoir (pages de fin de chapitre, pages vides, pages avant le premier chapitre). Nous avons également vu qu’un livre « normal » pour un roman ou une nouvelle se compose de pages à gauche et de pages à droite. On peut donc définir quatre styles de page (un par type) que l’on pourrait nommer ainsi&nbsp;:</p>
+
+<ul>
+	<li>page droite</li>
+	<li>page droite sans pagination</li>
+	<li>page gauche</li>
+	<li>page gauche sans pagination</li>
+</ul>
+
+<p>Il faut comprendre par cette nomination que page droite et page gauche disposeront d’une pagination. Il pourrait y avoir davantage de styles de page. Par exemple, certaines pourraient avoir des en-têtes, d’autres pourraient avoir un format ou des marges différentes, etc.). Basons-nous sur le document fourni pour le moment.</p>
+
+<p>La réflexion est la même pour les titres, les paragraphes, les caractères, etc. Il me faudra un titre principal, des titres de chapitre, un titre de table des matières (que je souhaite faire ressembler au titre de chapitre), un paragraphe de début, un paragraphe intermédiaire et un paragraphe de fin de chapitre, des notes de bas de page, un style de pagination, une lettrine, etc.</p>
+
+<h2>L’application</h2>
+
+<p><em>Writer</em> permet de donner un style à 5 types d’éléments, accessibles par les petits onglets en haut à gauche dans la fenêtre des styles&nbsp;:</p>
+
+<ul>
+	<li>les paragraphes (utile pour les divers titres, le corps de texte, etc.)</li>
+	<li>les caractères (utile pour les lettrines, les numéros de page, etc.)</li>
+	<li>les cadres (utile pour le « cache-misère », que nous verrons par la suite)</li>
+	<li>les pages (utile pour… les pages&#8239;!)</li>
+	<li>les listes (pas utile dans ce document)</li>
+</ul>
+
+<p>Pour créer un nouveau style, il faut d’abord cliquer sur l’onglet correspondant au type de style souhaité (paragraphe, caractère, cadre, page ou liste), puis de faire un clic droit dans la fenêtre et de choisir Nouveau….</p>
+
+<h3>Les pages</h3>
+
+<p>Lorsque l’on clique sur Nouveau…, la fenêtre Style de page apparaît. Elle comprend 8 panneaux, mais comme nous ne souhaitons pas d’arrière-plan, d’en-tête, de bordures et de colonnes, nous rendrons seulement visite à la moitié d’entre eux. Nous pouvons soustraire également de la liste le panneau Note de bas de page qui pourra toujours être configuré plus tard, si le style qui lui est attribué par défaut ne convient pas. Cet article ne se limitant pas seulement au document fourni, je devrais expliquer à quoi servent les panneaux que nous n’utiliseront pas, mais on comprend aisément leur utilité et fonctionnement en regardant leur contenu. Le panneau En-tête est similaire au panneau Pied de page que nous allons voir. Cela étant dit, commençons.</p>
+
+<h4>Gestionnaire</h4>
+
+<p>Il permet de renseigner le nom du style. Celui-ci doit être explicite&nbsp;: Page droite sans pagination par exemple.</p>
+
+<p>Le style de suite est le style de page qui sera appliqué à la prochaine page. Si le nom du style est Page droite sans pagination, il est logique que le style suivant soit Page gauche. Le style Page gauche n’étant peut-être pas encore créé, il faudra revenir sur ce panneau plus tard. Si à un endroit la page droite sans pagination doit être suivie d’une page gauche sans pagination par exemple, il sera possible de changer le style de la page suivante manuellement. Le style de suite doit être celui qui sera le plus fréquemment employé dans le document, afin d’avoir le moins possible à faire de changements manuels par la suite.</p>
+
+<p><em>Héritée de</em> est en principe grisé, inaccessible.</p>
+
+<p>Quant à <em>Catégorie</em>, je conseille de laisser « Styles personnalisés »; un style masqué ne servant pas à grand-chose.</p>
+
+<p>Enfin, un résumé permet de savoir si l’on a besoin d’aller dans les autres panneaux. Ne le trouvant pas spécialement bien mis en forme (quelques schémas techniques auraient été plus clairs), je préfère aller voir les autres panneaux plutôt que de le lire.</p>
+
+<h4>Page</h4>
+
+<p>Voici un autre panneau très intéressant. On peut y régler le format du papier, les marges et les paramètres de mise en page. En admettant que l’on crée le style d’une page de droite, il faudra mettre la marge gauche plus grande (qui sera la marge intérieure) et mettre Droite uniquement dans le champ Mise en page. Sous ce champ, il y a le format de la pagination. Il est judicieux de choisir Aucun(e) dans la liste, s’il s’agit d’un style de page sans pagination.</p>
+
+<p>Cocher la case Contrôle de repérage permet d’avoir un alignement parfait, entre la page de gauche et la page de droite, du style de référence que l’on choisit dans la liste déroulante juste en dessous. En admettant que vos paragraphes prennent le style Corps de texte, il faudra choisir ou laisser Corps de texte pour le style de référence.</p>
+
+<p>Note&nbsp;: Je n’ai pas créé un seul style de page pour les pages de droite et les pages de gauche, en choisissant une mise en page en vis-à-vis, car il n’aurait pas été possible (du moins, il me semble) de permettre par la suite d’indiquer que les chapitres doivent débuter obligatoirement sur une page de droite.</p>
+
+<h4>Pied de page</h4>
+
+<p>Pour avoir un pied de page, il suffit de l’activer.</p>
+
+<p>Décocher Même contenu sur la première page permet d’avoir un contenu différent sur les pages paires et impaires et sur la première page du document. Je ne coche jamais cette case, mais c’est à vous de voir. En tout cas, il ne faut pas la cocher si l’on souhaite un en-tête avec le titre du livre sur une page de gauche et le titre de chapitre sur une page de droite.</p>
+
+<p>Pour les marges et autres paramètres, ils sont assez compréhensibles.</p>
+
+<p>Le bouton Plus… permet de définir des bordures et un arrière-plan au pied de page (peu utile pour un roman).</p>
+
+<h3>Les paragraphes</h3>
+
+<p>12 panneaux pour la fenêtre Style de paragraphe. Là encore, nous allons voir les principaux ou les plus complexes (ceux qui nécessitent des explications).</p>
+
+<h4>Gestionnaire</h4>
+
+<p>Identique au gestionnaire du style de page. On peut néanmoins choisir l’héritage, ce qui est intéressant pour les éléments se ressemblant. Par exemple, un paragraphe de début de chapitre hérite d’un paragraphe standard, afin de disposer (d’hériter) de tout son style, mais aura en plus une lettrine pour première lettre, qui se configure dans le panneau Lettrines et aura en moins le retrait sur la première ligne, qui se configure dans <em>Retraits et espacement</em>.</p>
+
+<h4>Retraits et espacement</h4>
+
+<p>Ce panneau permet de donner un retrait et un espacement au texte. L’aperçu permet de bien voir ce que l’on configure.</p>
+
+<p>En cochant Automatique pour le retrait, le paragraphe se met automatiquement en retrait en fonction de la police et de l’interligne. Cocher cette case permet donc d’avoir une taille de retrait d’un cadratin&nbsp;: pratique&#8239;!</p>
+
+<p>L’interligne peut être réglé de différentes façons.</p>
+
+<p>Le contrôle de repérage permet de positionner les lignes de texte sur une grille invisible, permettant d’avoir le même alignement sur pages gauches et pages droites. Pour que cette option soit activée, il faut (en plus de cocher la case Activer), avoir activé le contrôle de repérage pour le style de page où il est appliqué.</p>
+
+<h4>Alignement</h4>
+
+<p>À part la rubrique <em>Texte-à-texte</em> et son option <em>Alignement</em>, le reste est facilement compréhensible. L’aide de LibreOffice, très utile, indique pour ceci&nbsp;:</p>
+
+<p>… option d’alignement pour les caractères de taille supérieure ou inférieure par rapport au reste du texte à l’intérieur du paragraphe.</p>
+
+<h4>Enchaînements</h4>
+
+<p>La coupure des mots ou <em>césure</em> est réglable ici. La césure est à éviter si le texte justifié dispose d’une belle longueur de ligne (environ 70 caractères). Autrement, elle peut être utile pour ne pas avoir d’espaces trop grands entre les mots. Le nombre maximal de coupures consécutives devrait rester à 0 pour un roman ou une nouvelle.</p>
+
+<p>Pour un style de titre de chapitre, qui doit se trouver obligatoirement sur une page de droite, la section <em>Sauts</em> a toute son utilité. On coche <em>Insérer</em>. On choisit <em>Page</em> en type et <em>Avant</em> en position. On coche ensuite <em>Avec le style de page</em> et on choisit <em>Page de droite</em>.</p>
+
+<p>La section <em>Options</em> permet de traiter les veuves et orphelines. Deux lignes pour chacune d’elles est le minimum pour un roman ou une nouvelle.</p>
+
+<h4>Plan et numérotation</h4>
+
+<p>Ce panneau est assez complexe et je ne l’ai jamais configuré, mais il permet de numéroter les lignes des paragraphes et cela nécessite plusieurs paramètres que je vous laisse découvrir au besoin. L’aide ne propose pas d’explications pour ce panneau.</p>
+
+<h3>Les caractères</h3>
+
+<p>La fenêtre Style de caractère ne comportant aucun nouveau panneau que ceux déjà vu ou ignorés du fait qu’ils sont simples et compréhensibles, il n’est pas utile d’en parler davantage.</p>
+
+<h4>Les cadres</h4>
+
+<p>La fenêtre <em>Style de cadre</em> comporte un bon nombre de panneaux complexes, mais lorsqu’il s’agit d’utiliser un cadre pour masquer un numéro de page sur une page qui ne doit pas en comporter (mais qu’il est impossible de faire autrement que d’utiliser un cadre blanc pour le masquer), eh bien on fait au plus simple pour configurer le style. Dans le document fourni, j’appelle ce style « cache-misère », car c’est ce qu’il fait. Vous pouvez afficher ses paramètres pour voir comment je l’ai configuré. Lorsque le document est complet, je place le curseur n’importe où dans la page qui ne mérite pas de pagination et j’insère, via Insertion… &gt; Cadre, un cadre (sans toucher aux options proposées). Je clique ensuite sur ce cadre pour le sélectionner et clique sur mon style cache-misère qui s’occupe de le placer tout seul au bon endroit (sur le numéro de page). Pour la page de gauche qui ne nécessite pas de pagination, il faudra mettre le style de page gauche sans pagination. Cela n’est pas possible pour la page droite. Je pense que cela est dû au fait qu’il y a un saut de page, mais rien n’est certain.</p>
+
+<h3>Problèmes rencontrés et désagréments</h3>
+
+<h4>Cul-de-lampe</h4>
+
+<p>Impossibilité d’ajouter un cul-de-lampe sans risquer de détériorer la mise en page. Le problème est qu’un cul-de-lampe est un caractère disposant d’une typographie d’ornements. Il se place dans un paragraphe (donc, un style de paragraphe nommé cul-de-lampe par exemple). Le paragraphe dispose d’un alignement centré. Parfois, ce paragraphe d’un caractère peut se retrouver seul en haut d’une page alors qu’il devrait toujours se trouver sous le dernier paragraphe du chapitre. Je n’ai pas trouvé comment faire en sorte qu’un paragraphe ne soit plus veuf. Si quelqu’un parvient à résoudre le problème, ce serait chouette qu’il m’en informe dans les commentaires. Je conseille donc d’éviter les culs-de-lampe ou de « dérégler » l’automatisme créé par les styles, mais dans ce cas, il vaut mieux faire la mise en page lorsque tout le livre est écrit. Il serait possible d’avoir un style de caractère avec une police d’ornements et de faire un retour à la ligne (avec Maj + Entrée). La dernière ligne du paragraphe étant centrée, le cul-de-lampe serait centré. Cependant, la ligne avant le cul-de-lampe resterait alignée à gauche, ce qui n’est pas du plus bel effet.</p>
+
+<h3>« Bricolage » sur la pagination</h3>
+
+<p>Nous l’avons vu; il faut parfois tricher pour qu’un numéro de page n’apparaisse pas (avec un cadre blanc). C’est un peu comme passer un coup de peinture blanche au lieu de faire une rature.</p>
+
+<h3>Perte de temps</h3>
+
+<p>Il peut s’avérer très complexe de faire une bonne mise en page. La création des styles est fastidieuse et il faut réfléchir à trop de choses. De plus, même faite avec minutie et application, elle ne permet pas un automatisme complet. On peut cependant se réjouir de savoir qu’il est possible d’enregistrer ces styles et de s’en servir pour d’autres documents. Il suffit pour cela de créer un modèle de document. Ce qui est certain, c’est que la souplesse du logiciel ne donne pas l’envie de tester toutes sortes de mises en page pour choisir la bonne. Lorsque l’on en a créé une, on est « crevé »&#8239;!</p>
+
+<h2>Conclusion</h2>
+
+<p>Je comptais vous proposer de découvrir <em>Scribus</em>, un logiciel Open Source de mise en page, mais pour un roman, il ne me paraît finalement pas du tout adapté.</p>
+
+<p>Pour conclure, donc, je dirais que Writer est un excellent logiciel capable de faire beaucoup de choses, surtout au niveau de la mise en page, mais qu’il lui reste certaines lacunes et un manque de simplicité.</p>
+
+<p>Vous pouvez vous servir de mon document librement pour vos mises en page. Je pense qu’il apporte son aide et mérite d’être amélioré pour vos propres mises en page.</p>
+
+<p>Enfin, il faut retenir qu’il est important de séparer le fond de la forme (le texte de la mise en page) pour une efficacité optimale et une homogénéité dans tout le document. C’est ce que permet le langage Markdown par exemple. On peut retrouver cette façon de procéder dans le HTML et le CSS; le HTML pour le contenu et le CSS pour les styles.</p>
+
+<hr>
+
+<p>Une troisième partie sera ajoutée à cet article. Elle parlera du format PDF, que les imprimeurs acceptent en général. Elle corrigera quelques manques et parlera d’alternatives pour faire une mise en page de roman. Il se peut qu’elle contienne également quelques exemples de belles mises en page.</p>
+
+<hr>
+
+<p>Encore une fois, n’hésitez pas à partager vos impressions sur le sujet dans les commentaires.</p>
+</article>
+		
+<div id=btTop>↥</div>
+<script src="https://akeminosekai.github.io/theme/app.js"></script>
+</body>
+</html>

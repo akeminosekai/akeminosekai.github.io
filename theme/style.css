@@ -1,0 +1,304 @@
+* {box-sizing: border-box;}
+body {
+	font: 1.2em 'Source Sans Pro', sans-serif;
+	line-height: 1.4em;
+	margin: 0 auto;
+	padding: 40px;
+	max-width: 780px;
+	width: 100%;
+	background: #eee url("bg.gif");
+}
+p {text-align: justify;}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Mouse Memoirs', sans-serif;
+	font-weight: normal;
+	text-align: left;
+}  
+h1 {
+	font-size: 3.1em;
+	line-height: 1.6em;
+}
+h2 {
+	font-size: 2.6em;
+	line-height: 1em;
+}
+h3 {
+	font-size: 2.2em;
+	line-height: 0.8em;
+}
+h4 {
+	font-size: 1.6em;
+}
+header a {color: #000;}
+a{color: #282d60;}
+a:hover {color: #141fbe;}
+.icons {
+	width: 24px; height: 24px;
+	background: url('icons.svg');
+	display: inline-block;
+	vertical-align: text-bottom;
+}
+.iconTag {margin-right: 15px;}
+.iconPin {background-position-x: -24px;margin-right: 15px;}
+.iconPages {background-position-x: -48px;margin-right: 15px;}
+.iconPrevNext {background-position-x: -72px;margin-right: 15px;}
+.iconNext {background-position-x: -96px;}
+.iconPrev {background-position-x: -120px;}
+.iconNewer {background-position-x: -144px;}
+.iconOlder {background-position-x: -168px;}
+
+.logo {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+header {
+	margin-bottom: 40px;
+}
+header h1 {
+	font-size: 2.5em;
+	font-weight: normal;
+	font-style: italic;
+	display: inline-block;
+}
+header h1 a {
+	text-decoration: none;
+}
+article h1 { /* titre de l'article*/
+	display:inline-block;
+	line-height: 1em;
+}
+.skipTo { /* passer d'un article à l'autre*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+}
+.grid { /* grille affichage img à coté de txt*/
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-gap: 2em;
+	align-items: center;
+}
+.gridDemi { /* grille affichage img à coté de txt*/
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	grid-gap: 2em;
+	align-items: center;
+}
+img {width: 100%;}
+figure { /* image dans une figure*/
+	margin : 0px;
+}
+figcaption { /* légende de la figure*/
+	font-size: .9em;
+	text-align: right;
+}
+hr { /* saut de ligne*/
+	content: ' ';
+	background: transparent url(hr.svg) no-repeat;
+	display: block;
+	width: 100px;
+	height: 40px;
+	margin: 0 auto 20px;
+	border: none;
+}
+.tag { /* catégories*/
+	display: inline-block;
+	padding: 3px 6px;
+	margin-right:4px;
+	margin-bottom: 4px;
+	background: #ddd;
+	text-decoration: none;
+	font-size: .9em;
+}
+blockquote { /* citation*/
+	color: #562592;
+	border-left: 5px solid #d9c6f0;
+	padding: 0px 15px;
+	margin-right: 0;
+	margin-left: 15px;
+}
+blockquote footer { /* auteur de citation*/
+	background: #d9c6f0;
+	color: #000;
+	padding: 4px 10px;
+	display: inline-block;
+}
+blockquote p {
+	border: 1px solid #8e64c5;
+	background: #e7dbf7;
+	border-radius: 1em;
+	padding: .5em .8em;
+}
+blockquote p.right {
+	width: 70%;
+	margin-left: 30%;
+}
+blockquote p.left {
+	width: 70%;
+}
+blockquote p {
+	width: 70%;
+}	
+.discA { /* style dialogue réplique 1*/
+	margin-bottom: 0;
+}
+.discI { /* style dialogue réplique milieu*/
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.discZ { /* style dialogue réplique de fin*/
+	margin-top: 0;
+}
+
+.discuss {margin: 1em 0;
+}
+	.discuss > p {margin: 0 0 0 1em;
+}
+
+table { /* uniquement dans article typo*/
+	border-collapse: collapse;
+	width: 100%;
+}
+th { /* entête tableau uniquement dans article typo*/
+	background: #a8edd0;
+	border: 1px solid #53dca2;
+	padding: 20px;
+	font-size: 1.1em;
+	text-align: center;
+}
+td { /* tableau uniquement dans article typo*/
+	border: 1px solid #7de5b9;
+	padding: 10px;
+	text-align: center;
+}
+code { /* utilisé dans les articles de documentation blogo et article typographie*/
+	background: #d9c6f0;
+	padding: 1px 3px;
+	border-radius: 4px;
+}
+.sino { /* survole mots en kanji pour voir lecture */
+	-ms-word-break: keep-all;
+	word-break: keep-all;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	font-size: 1.1em;
+	font-weight: 400;
+}
+.voc { /* survole mots en kanji pour voir sens */
+	color: #CB3F13;
+}
+.btAff { /* bouton d'affichage de la correction dans exos jap*/
+	background: rgb(197,107,167);
+	color: #fff;
+	padding: 3px 8px;
+	cursor: pointer;
+	display: inline-block;
+	border-radius: 5px;
+}
+.panCorrection { /* utilisé pour masquer les corrections des exos de japonais*/
+	display: none;
+}
+.date { /* utilisé dans le code (templates)*/
+	margin-top: 0;
+	margin-bottom: 0;
+}
+h2.date { /* utilisé dans le code (templates)*/
+	margin-bottom: 10px;
+	font-size: 1.8em;
+}
+h3.date { /* utilisé dans le code (templates)*/
+	margin-bottom: 10px;
+	font-size: 1.5em;
+}
+ins { /* surligner des mots en vert dans jap*/
+	background: #95e18d;
+	text-decoration: none;
+	color: #275c29;
+	padding: 1px 2px;
+	border-radius: 4px;
+}
+del { /* surligner des mots en rouge dans jap*/
+	background: #f09292;
+	text-decoration: none;
+	color: #540e0e;
+	padding: 1px 2px;
+	border-radius: 4px;
+}
+.roman { /* style de citation de textes*/
+	font-size: 1em;
+	font-family: serif;
+	line-height: 1.3em;
+	padding: 1em;
+	box-shadow: 0 0 1em #ccc;
+	background: #efefef;
+	border-radius: 1em;
+	margin: 2em 0;
+}
+.liGlobalImg {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+	margin-left: -17px;
+}
+.flexGlobalImg {
+	gap: .5em;
+	display: flex;
+	align-items: center;
+	margin-left: 3px;
+}
+.flexGlobalImg a {
+	gap: .5em;
+	display: flex;
+	align-items: center;
+}
+.globalImg {
+	width: 50px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.chapo { /* enveloppe tout le chapeau */
+	font-size: .9em;
+	color: #666;
+	font-style: italic;
+	display: flex;
+	gap: .5em;
+	flex-direction: column;
+}
+.chapoImg {
+	display: flex;
+	gap: .5em;
+	flex-wrap: wrap;
+}
+ .chapoImg > img {
+	width: 50px;
+	border: 1px solid;
+	border-radius: 5px;
+}
+.chapoTxt {
+	margin-top: -8px;
+}
+.chapoTxt::before {
+	content:"↳ ";
+}
+#btTop {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	background: #fff;
+	box-shadow: 0 0 10px #ccc;
+	padding: 5px;
+	border-radius: 50%;
+	font-size: 1.1em;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+}
