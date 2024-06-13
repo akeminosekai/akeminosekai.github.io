@@ -230,14 +230,14 @@ del { /* surligner des mots en rouge dans jap*/
 	border-radius: 4px;
 }
 .roman { /* style de citation de textes*/
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: serif;
-	line-height: 1.3em;
+	line-height: 1.5em;
 	padding: 1em;
-	box-shadow: 0 0 1em #ccc;
-	background: #efefef;
-	border-radius: 1em;
 	margin: 2em 0;
+}
+.roman p {
+	text-indent: 1em;
 }
 .liGlobalImg {
 	display: flex;
