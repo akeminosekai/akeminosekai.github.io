@@ -1,33 +1,48 @@
+@font-face {
+	font-family: 'mi';
+	src: url(Montserrat-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: 'm';
+	src: url(Montserrat-VariableFont_wght.ttf);
+}
 * {box-sizing: border-box;}
 body {
-	font: 1.2em 'Source Sans Pro', sans-serif;
-	line-height: 1.4em;
+	font: 1.3em 'm', sans-serif;
+	line-height: 1.3em;
 	margin: 0 auto;
 	padding: 40px;
 	max-width: 780px;
 	width: 100%;
 	background: #eee url("bg.gif");
 }
-p {text-align: justify;}
+em, i {
+	font-family: 'mi';
+}
+h1, h2, h3, h4, h5, h6, strong, b {
+	font-variation-settings: 'wght' 600;
+}
+p {
+	text-align: justify;
+	line-height: 1.5em;
+}
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Mouse Memoirs', sans-serif;
-	font-weight: normal;
 	text-align: left;
-}  
+}
 h1 {
-	font-size: 3.1em;
+	font-size: 2em;
 	line-height: 1.6em;
 }
 h2 {
-	font-size: 2.6em;
+	font-size: 1.7em;
 	line-height: 1em;
 }
 h3 {
-	font-size: 2.2em;
+	font-size: 1.6em;
 	line-height: 0.8em;
 }
 h4 {
-	font-size: 1.6em;
+	font-size: 1.5em;
 }
 header a {color: #000;}
 a{color: #282d60;}
@@ -230,14 +245,23 @@ del { /* surligner des mots en rouge dans jap*/
 	border-radius: 4px;
 }
 .roman { /* style de citation de textes*/
-	font-size: 1.1em;
-	font-family: serif;
-	line-height: 1.5em;
 	padding: 1em;
 	margin: 2em 0;
 }
-.roman p {
-	text-indent: 1em;
+.roman h2.deco {
+	font-size: 2em;
+	font-family: 'mi';
+	text-align: center;
+}
+.roman h2.deco::before  {
+	content: '✧*';
+	padding-right: 15px;
+	font-size: 2rem;
+}
+.roman h2.deco::after  {
+	content: '*✧';
+	padding-left: 15px;
+	font-size: 2rem;
 }
 .liGlobalImg {
 	display: flex;
@@ -304,4 +328,7 @@ del { /* surligner des mots en rouge dans jap*/
 	align-items: center;
 	justify-content: center;
 	display: none;
+}
+.datecat {
+	margin-bottom: 10px;
 }
