@@ -110,12 +110,14 @@ article h1 { /* titre de l'article*/
 	grid-template-columns: 1fr 3fr;
 	grid-gap: 2em;
 	align-items: center;
+	margin-bottom: 2em;
 }
 .gridDemi { /* grille affichage img à coté de txt*/
 	display: grid;
 	grid-template-columns: 2fr 2fr;
 	grid-gap: 2em;
 	align-items: center;
+	margin-bottom: 2em;
 }
 img {width: 100%;}
 figure { /* image dans une figure*/
