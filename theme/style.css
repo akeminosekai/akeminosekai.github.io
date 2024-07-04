@@ -127,7 +127,7 @@ figcaption { /* légende de la figure*/
 	font-size: .9em;
 	text-align: right;
 }
-hr { /* saut de ligne*/
+.roman hr { /* saut de ligne*/
 	content: ' ';
 	background: transparent url(hr.svg) no-repeat;
 	display: block;
@@ -135,6 +135,22 @@ hr { /* saut de ligne*/
 	height: 40px;
 	margin: 0 auto 20px;
 	border: none;
+}
+.roman hr::before {
+	content: '';
+}
+hr { /* saut de ligne*/
+	font-size: 2rem;
+	line-height: 2rem;
+	text-align: center;
+	width: 100px;
+	margin: 1em auto;
+	border: none !important;
+}
+hr::before { /* saut de ligne*/
+	content: "ᨐ";
+	text-align: center;
+	color:#000
 }
 .tag { /* catégories*/
 	display: inline-block;
