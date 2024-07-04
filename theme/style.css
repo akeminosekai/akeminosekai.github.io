@@ -143,13 +143,12 @@ hr { /* saut de ligne*/
 	font-size: 2rem;
 	line-height: 2rem;
 	text-align: center;
-	width: 100px;
+	width: 100%;
 	margin: 1em auto;
 	border: none !important;
 }
 hr::before { /* saut de ligne*/
-	content: "ᨐ ᨐ";
-	text-align: center;
+	content: "ᨐOᨐ";
 	color:#000
 }
 .tag { /* catégories*/
