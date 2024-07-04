@@ -148,7 +148,7 @@ hr { /* saut de ligne*/
 	border: none !important;
 }
 hr::before { /* saut de ligne*/
-	content: "ᨐ";
+	content: "ᨐ ᨐ";
 	text-align: center;
 	color:#000
 }
