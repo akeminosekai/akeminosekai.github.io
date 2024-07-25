@@ -19,8 +19,17 @@ body {
 em, i {
 	font-family: 'mi';
 }
-h1, h2, h3, h4, h5, h6, strong, b {
+h1, h2, h3, h4, h5, h6, strong, b, .blogTitle {
 	font-variation-settings: 'wght' 600;
+}
+.blogTitle {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	font-size: 1.6em;
+}
+a.blogTitle {
+	text-decoration: none;
 }
 p {
 	text-align: justify;
@@ -89,9 +98,10 @@ header {
 }
 header h1 {
 	font-size: 2.5em;
-	font-weight: normal;
-	font-style: italic;
-	display: inline-block;
+	text-align: center;
+	border-top: 3px double;
+	border-bottom: 3px double;
+	margin-bottom: 0;
 }
 header h1 a {
 	text-decoration: none;
