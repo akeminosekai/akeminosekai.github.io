@@ -373,3 +373,15 @@ del { /* surligner des mots en rouge dans jap*/
 .datecat {
 	margin-bottom: 10px;
 }
+section {
+	max-width: 90%;
+	background: #f4f2ed;
+	box-shadow: 10px 10px 10px rgba(103, 58, 10, 0.2);
+	padding: 30px;
+	margin-bottom: 40px;
+	border: 1px solid rgba(232, 191, 27, 0.8);
+}
+section:nth-child(odd) {
+	margin-left: 10%;
+	box-shadow: -10px 10px 10px rgba(103, 58, 10, 0.2);
+}
