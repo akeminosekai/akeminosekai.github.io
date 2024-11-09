@@ -286,7 +286,7 @@ del { /* surligner des mots en rouge dans jap*/
 	border-radius: 4px;
 }
 .roman { /* style de citation de textes*/
-	padding: 1em;
+	padding: 1em O;
 	margin: 2em 0;
 }
 .roman h2.deco {
