@@ -1,26 +1,12 @@
-@font-face {
-	font-family: 'mi';
-	src: url(Montserrat-Italic-VariableFont_wght.ttf);
-}
-@font-face {
-	font-family: 'm';
-	src: url(Montserrat-VariableFont_wght.ttf);
-}
 * {box-sizing: border-box;}
 body {
-	font: 1.3em 'm', sans-serif;
-	line-height: 1.3em;
+	font-size: clamp(16px,1rem + .5vw,24px);
+	line-height: 1.5;
 	margin: 0 auto;
-	padding: 40px;
-	max-width: 780px;
+	padding: 1em clamp(.8rem,5vw,3rem);
+	max-width: 65ch;
 	width: 100%;
 	background: #eee url("bg.gif");
-}
-em, i {
-	font-family: 'mi';
-}
-h1, h2, h3, h4, h5, h6, strong, b, .blogTitle {
-	font-variation-settings: 'wght' 600;
 }
 .blogTitle {
 	display: flex;
@@ -40,15 +26,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 2em;
-	line-height: 1.6em;
 }
 h2 {
 	font-size: 1.7em;
-	line-height: 1em;
 }
 h3 {
 	font-size: 1.5em;
-	line-height: 0.8em;
 }
 h4 {
 	font-size: 1.3em;
